@@ -9,7 +9,7 @@ import retrofit2.http.*
 import java.util.concurrent.TimeUnit
 
 
-val BASE_URL = "http://awstest-balancer-1233234915.us-east-2.elb.amazonaws.com/"
+val BASE_URL_API = "http://awstest-balancer-1233234915.us-east-2.elb.amazonaws.com/"
 
 interface ApiForIP {
 
@@ -25,7 +25,7 @@ interface ApiForIP {
                 .readTimeout(120, TimeUnit.SECONDS)
                 .build()
             val retrofit: Retrofit = Retrofit.Builder()
-                .baseUrl(BASE_URL)
+                .baseUrl(BASE_URL_API)
                 .addConverterFactory(ScalarsConverterFactory.create())
                 .addConverterFactory(GsonConverterFactory.create())
                 .client(okHttpClient)
