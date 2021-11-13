@@ -22,7 +22,6 @@ class MainActivity : AppCompatActivity() {
             binding.progressBar.isVisible = false
         })
 
-
         binding.button.setOnClickListener {
             binding.progressBar.isVisible = true
             binding.textView.text = "IP..."
